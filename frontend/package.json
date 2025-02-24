@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "interactjs": "^1.10.1",
@@ -15,17 +15,20 @@
     "react-image-crop": "^8.6.6",
     "react-loading": "^2.0.3",
     "react-notification-system": "^0.4.0",
-    "react-scripts": "5.0.0",
+    "react-scripts": "5.0.1",
     "react-tooltip": "^4.2.14",
     "socket.io-client": "^3.1.2",
     "styled-components": "^5.2.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "eslintConfig": {
     "extends": [
@@ -44,5 +47,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "snyk": true
 }
